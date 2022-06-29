@@ -26,6 +26,7 @@
             <AppenderRef ref="Console"/>
             <AppenderRef ref="MyFile"/>
         </logger>
+        <logger name="org.mybatis" level="TRACE" additivity="false"></logger>
 
         <Root level="INFO">
             <AppenderRef ref="Console"/>

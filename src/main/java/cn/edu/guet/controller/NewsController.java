@@ -1,7 +1,10 @@
 package cn.edu.guet.controller;
 
+import cn.edu.guet.bean.News;
 import cn.edu.guet.mvc.annotation.Controller;
 import cn.edu.guet.mvc.annotation.RequestMapping;
+import cn.edu.guet.service.INewsService;
+import cn.edu.guet.service.IUserService;
 import cn.edu.guet.util.WangEditor;
 import com.google.gson.Gson;
 import org.apache.commons.fileupload.FileItem;
@@ -9,6 +12,8 @@ import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,6 +25,16 @@ import java.util.List;
 
 @Controller
 public class NewsController {
+
+    AutowiredAnnotationBeanPostProcessor d;
+
+    private INewsService newsServiceImpl;
+
+    @Autowired
+    public void setNewsServiceImpl(IUserService userServiceImpl){
+        this.newsServiceImpl=newsServiceImpl;
+    }
+
     /*
     一个负责文件上传
     一个负责接收文字内容信息
@@ -83,5 +98,10 @@ public class NewsController {
         }
         String newsContent = request.getParameter("mytxtIntro");
         System.out.println("富文本内容：" + newsContent);
+    }
+    @RequestMapping("/newsList")
+    public List<News> newsList(){
+        newsServiceImpl.test();
+        return null;
     }
 }

@@ -2,10 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
-        http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+        http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx https://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
     <!-- cglib -->
@@ -43,7 +45,24 @@
         <property name="configLocation" value="classpath:mybatis-config.xml"></property>
     </bean>
 
+    <!-- Spring容器启动的时候，就不会主动去创建这个对象，只有你通过ctx.getBean("sss")的时候，才会去创建对象 -->
 
     <context:component-scan base-package="cn.edu.guet"></context:component-scan>
 
+    <!-- Spring事务配置 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <!-- 基于注解的配置 -->
+    <tx:annotation-driven></tx:annotation-driven>
+<!--    <aop:config>-->
+<!--        <aop:pointcut id="ptCut" expression="execution(* cn.edu.guet.service.*.*(..))"></aop:pointcut>-->
+<!--        <aop:advisor advice-ref="txAdvice" pointcut-ref="ptCut"></aop:advisor>-->
+<!--    </aop:config>-->
+
+<!--    <tx:advice transaction-manager="transactionManager" id="txAdvice">-->
+<!--        <tx:attributes>-->
+<!--            <tx:method name="delete*" no-rollback-for="java.lang.RuntimeException"/>-->
+<!--        </tx:attributes>-->
+<!--    </tx:advice>-->
 </beans>

@@ -9,7 +9,26 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77272ff9-72ae-472a-8b39-1585fecd1d9b" name="Default Changelist" comment="1、扫描自定义注解:Controller&#10;2、扫描Service&#10;3、事务（声明式、注解）" />
+    <list default="true" id="77272ff9-72ae-472a-8b39-1585fecd1d9b" name="Default Changelist" comment="1、扫描自定义注解:Controller&#10;2、扫描Service&#10;3、事务（声明式、注解）">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/News.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/RolePermissionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/RolePermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/UserRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mapper/UserRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/INewsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/IRoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/impl/NewsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/articleList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cn/edu/guet/test/RoleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/controller/NewsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,10 +114,27 @@
       <recent name="$PROJECT_DIR$/src/main/java/cn/edu/guet/util" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.edu.guet.mapper" />
       <recent name="cn.edu.guet.util" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.RoleTest.testDeleteRole">
+    <configuration name="RoleTest.testDeleteRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpringMVC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.guet.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cn.edu.guet.test" />
+      <option name="MAIN_CLASS_NAME" value="cn.edu.guet.test.RoleTest" />
+      <option name="METHOD_NAME" value="testDeleteRole" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.56" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.56" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/SpringMVC/login.html" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -187,6 +223,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RoleTest.testDeleteRole" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -240,7 +281,8 @@
       <workItem from="1656430511097" duration="1158000" />
       <workItem from="1656460215500" duration="14914000" />
       <workItem from="1656495808877" duration="1305000" />
-      <workItem from="1656497301629" duration="90000" />
+      <workItem from="1656497301629" duration="875000" />
+      <workItem from="1656502893283" duration="7375000" />
     </task>
     <task id="LOCAL-00001" summary="1、实现登录验证&#10;2、登录成功后返回菜单JSON到浏览器">
       <created>1654527520691</created>
