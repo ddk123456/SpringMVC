@@ -21,12 +21,10 @@ public class RoleServiceImpl implements IRoleService {
     private UserRoleMapper userRoleMapper;
 
     @Override
-    @Transactional(noRollbackFor = RuntimeException.class)
+    @Transactional
     public int deleteRoleById(String roleId) {
         rolePermissionMapper.deleteRolePermission(roleId);//成功
-
         userRoleMapper.deleteUserRole(roleId);//成功
-
         /*
         Spring事务管理，默认针对运行时异常回滚
          */
@@ -35,8 +33,6 @@ public class RoleServiceImpl implements IRoleService {
             throw new RuntimeException("ddddd");
         }
         roleMapper.deleteRoleById(roleId);//失败
-
-
 
         return 0;
     }

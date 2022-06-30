@@ -17,7 +17,7 @@ public class RoleTest {
     private IRoleService roleServiceImpl;
 
     @Test
-    public void testDeleteRole(){
-        roleServiceImpl.deleteRoleById("26f627db863442a9966c69a9e69712a2");
+    public void testDeleteRole() {
+        roleServiceImpl.deleteRoleById("67426c770519471384fa87aa0fabbc45");
     }
 }

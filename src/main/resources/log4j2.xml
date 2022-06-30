@@ -22,11 +22,14 @@
     <!-- 定义logger,只有定义了logger并引入了appender,appender才会有效 -->
     <Loggers>
         <!-- 将业务mapper接口所在的包填写进去,并用在控制台和文件中输出 -->
-        <logger name="cn.edu.guet.mapper" level="TRACE" additivity="false">
+        <logger name="cn.edu.guet.mapper" level="DEBUG" additivity="false">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="MyFile"/>
         </logger>
-        <logger name="org.mybatis" level="TRACE" additivity="false"></logger>
+        <logger name="org.mybatis" level="trace" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="MyFile"/>
+        </logger>
 
         <Root level="INFO">
             <AppenderRef ref="Console"/>
